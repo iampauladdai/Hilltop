@@ -17,7 +17,7 @@ struct ContentView: View {
 class MapDelegate: NSObject, MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay)
-        renderer.strokeColor = UIColor.yellow
+        renderer.strokeColor = UIColor.black
         renderer.lineWidth = 5.0
         return renderer
     }
@@ -52,8 +52,11 @@ struct MapView: UIViewRepresentable {
                     for route in response.routes {
                         uiView.addOverlay(route.polyline)
                         uiView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+                        let eta = route.expectedTravelTime
+                        print("ETA: \(eta) seconds")
                     }
                 }
+        
         
     }
 
