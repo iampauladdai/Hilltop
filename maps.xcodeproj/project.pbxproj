@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1451D9B8299C742400F7AC08 /* MapScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1451D9B7299C742400F7AC08 /* MapScreenView.swift */; };
 		14520D38298F6AC400B4040B /* mapsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14520D37298F6AC400B4040B /* mapsApp.swift */; };
 		14520D3A298F6AC400B4040B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14520D39298F6AC400B4040B /* ContentView.swift */; };
 		14520D3C298F6AC600B4040B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14520D3B298F6AC600B4040B /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 		14520D49298F6AC600B4040B /* mapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14520D48298F6AC600B4040B /* mapsTests.swift */; };
 		14520D53298F6AC600B4040B /* mapsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14520D52298F6AC600B4040B /* mapsUITests.swift */; };
 		14520D55298F6AC600B4040B /* mapsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14520D54298F6AC600B4040B /* mapsUITestsLaunchTests.swift */; };
+		145F62642999D5F90058F4F6 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145F62632999D5F90058F4F6 /* SplashScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1451D9B6299C717E00F7AC08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1451D9B7299C742400F7AC08 /* MapScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenView.swift; sourceTree = "<group>"; };
 		14520D34298F6AC400B4040B /* maps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = maps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14520D37298F6AC400B4040B /* mapsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapsApp.swift; sourceTree = "<group>"; };
 		14520D39298F6AC400B4040B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +48,7 @@
 		14520D4E298F6AC600B4040B /* mapsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mapsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14520D52298F6AC600B4040B /* mapsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapsUITests.swift; sourceTree = "<group>"; };
 		14520D54298F6AC600B4040B /* mapsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		145F62632999D5F90058F4F6 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +99,13 @@
 		14520D36298F6AC400B4040B /* maps */ = {
 			isa = PBXGroup;
 			children = (
+				1451D9B6299C717E00F7AC08 /* Info.plist */,
 				14520D37298F6AC400B4040B /* mapsApp.swift */,
 				14520D39298F6AC400B4040B /* ContentView.swift */,
 				14520D3B298F6AC600B4040B /* Assets.xcassets */,
 				14520D3D298F6AC600B4040B /* Preview Content */,
+				145F62632999D5F90058F4F6 /* SplashScreen.swift */,
+				1451D9B7299C742400F7AC08 /* MapScreenView.swift */,
 			);
 			path = maps;
 			sourceTree = "<group>";
@@ -257,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				145F62642999D5F90058F4F6 /* SplashScreen.swift in Sources */,
 				14520D3A298F6AC400B4040B /* ContentView.swift in Sources */,
 				14520D38298F6AC400B4040B /* mapsApp.swift in Sources */,
+				1451D9B8299C742400F7AC08 /* MapScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +430,7 @@
 				DEVELOPMENT_TEAM = TG2YQYM83X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = maps/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -432,9 +443,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = pauladdai.maps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -449,6 +463,7 @@
 				DEVELOPMENT_TEAM = TG2YQYM83X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = maps/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -461,9 +476,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = pauladdai.maps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
