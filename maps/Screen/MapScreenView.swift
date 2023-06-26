@@ -17,19 +17,24 @@ struct MapScreenView: View {
     
     @State private var magColor: Color = Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
     
-    
-    @State var source =  CLLocationCoordinate2D()
-    @State var destination =  CLLocationCoordinate2D()
+    @Binding var companyCordinate: CLLocationCoordinate2D
+  
+    @StateObject var locationManager = LocationManager()
+
 
     var body: some View {
         
         ZStack{
-            MapView(mapType: mapType, source: source,destination: destination).cornerRadius(20)
+            MapView(mapType: mapType,source: CLLocationCoordinate2D(latitude: 41.57, longitude: 40.88), destination: companyCordinate).cornerRadius(20)
+           // Map(coordinateRegion: $locationManager.region, showsUserLocation: true)
+            
             ZStack{
-                TextField("Destination", text: $searchField).onSubmit {
-                    self.source = CLLocationCoordinate2D(latitude: 41.503065632109184, longitude: -90.55144540983939)
-                    self.destination = CLLocationCoordinate2D(latitude: 41.4919, longitude: -90.5593)
-                }
+                
+                TextField(String(companyCordinate.longitude), text: $searchField)
+
+//                    self.source = CLLocationCoordinate2D(latitude: 41.503065632109184, longitude: -90.55144540983939)
+//                    self.destination = CLLocationCoordinate2D(latitude: 41.4919, longitude: -90.5593)
+//                }
                     .font(.system(size: 15, weight: .semibold))
                     .padding().multilineTextAlignment(.center)
                     .overlay(RoundedRectangle(cornerRadius: 20.0).strokeBorder(searchColor, style: StrokeStyle(lineWidth: 3.0)))
@@ -43,7 +48,6 @@ struct MapScreenView: View {
             Picker("", selection: $mapType) {
                 Text("Standard").tag(MKMapType.standard)
                 Text("Hybrid").tag(MKMapType.hybrid)
-                Text("satellite").tag(MKMapType.satellite)
             }.onChange(of: mapType) { _ in
                 if self.mapType == MKMapType.hybrid || self.mapType == MKMapType.satellite  {
                     self.searchColor = Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
@@ -59,19 +63,73 @@ struct MapScreenView: View {
             .background(.thickMaterial).offset(y: 350)
             
             
-        }.ignoresSafeArea()
+        }.ignoresSafeArea().onAppear(
+            perform: {CLLocationManager().requestLocation()
+            }
+            
+        )
     }
     
     
     
+    class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
+
+        private let locationManager = CLLocationManager()
+        @Published var locationStatus: CLAuthorizationStatus?
+        @Published var lastLocation: CLLocation?
+        @Published var region = CLLocationCoordinate2D()
+
+
+        override init() {
+            super.init()
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.startUpdatingLocation()
+        }
+
+       
+        
+        var statusString: String {
+            guard let status = locationStatus else {
+                return "unknown"
+            }
+            
+            switch status {
+            case .notDetermined: return "notDetermined"
+            case .authorizedWhenInUse: return "authorizedWhenInUse"
+            case .authorizedAlways: return "authorizedAlways"
+            case .restricted: return "restricted"
+            case .denied: return "denied"
+            default: return "unknown"
+            }
+        }
+
+        func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+            locationStatus = status
+            //print(#function, statusString)
+        }
+        
+        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+            guard let location = locations.last else { return }
+            lastLocation = location
+            locations.last.map {
+                        region = CLLocationCoordinate2D(latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude)
+                    }
+            
+            print(#function, location)
+        }
+    }
     
-    class MapDelegate: NSObject, MKMapViewDelegate {
+class MapDelegate: NSObject, MKMapViewDelegate , ObservableObject, CLLocationManagerDelegate{
+      
         func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
             let renderer = MKPolylineRenderer(overlay: overlay)
             renderer.strokeColor = UIColor.orange
             renderer.lineWidth = 6.0
             return renderer
         }
+ 
     }
     
     struct MapView: UIViewRepresentable {
@@ -80,27 +138,27 @@ struct MapScreenView: View {
         var mapType: MKMapType
         let source: CLLocationCoordinate2D
         let destination: CLLocationCoordinate2D
+        @StateObject var locationManager = LocationManager()
+
 
         func makeUIView(context: Context) -> MKMapView {
+            map.delegate = mapDelegate
             map.isPitchEnabled = true
             map.showsUserLocation = true
-            map.delegate = mapDelegate
-            let coordinate = source
-            map.setCenter(coordinate, animated: true)
-
+            map.showsUserLocation = true
+            map.setCenter(locationManager.region, animated: true)
+            print(source)
             return map
         }
         
         
         func updateUIView(_ uiView: MKMapView, context: Context) {
-                
            if source.latitude != nil {
                 let request = MKDirections.Request()
                 request.source = MKMapItem(placemark: MKPlacemark(coordinate: source))
                 request.destination = MKMapItem(placemark: MKPlacemark(coordinate: destination))
                 
                 let directions = MKDirections(request: request)
-            
             
                 
                 directions.calculate { (response, error) in
@@ -127,6 +185,15 @@ struct MapScreenView: View {
 
 struct MapScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        MapScreenView()
+        MapScreenView(companyCordinate: .constant(CLLocationCoordinate2D()))
     }
 }
+
+
+
+//TODO:
+//Placemarker
+//current location
+//set default location from Africa
+//Homepage
+// Categories -> Groceries, gyms, banks, fast food

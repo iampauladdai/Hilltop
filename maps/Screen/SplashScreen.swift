@@ -16,7 +16,7 @@ struct SplashScreen: View {
             
             VStack{
                 //ConnectMe
-                Text("ConnectMe").font(.system(size: 32, weight: .semibold, design: .rounded)).foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                Image("logo").offset(x: -10)
             }
         }
         

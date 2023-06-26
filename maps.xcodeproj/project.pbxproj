@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14162C0A29F583BC00D04759 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14162C0929F583BC00D04759 /* TabsView.swift */; };
+		14162C0C29F58D9300D04759 /* campusEvents.json in Resources */ = {isa = PBXBuildFile; fileRef = 14162C0B29F58D9300D04759 /* campusEvents.json */; };
 		1451D9B8299C742400F7AC08 /* MapScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1451D9B7299C742400F7AC08 /* MapScreenView.swift */; };
 		14520D38298F6AC400B4040B /* mapsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14520D37298F6AC400B4040B /* mapsApp.swift */; };
 		14520D3A298F6AC400B4040B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14520D39298F6AC400B4040B /* ContentView.swift */; };
@@ -16,6 +18,14 @@
 		14520D53298F6AC600B4040B /* mapsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14520D52298F6AC600B4040B /* mapsUITests.swift */; };
 		14520D55298F6AC600B4040B /* mapsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14520D54298F6AC600B4040B /* mapsUITestsLaunchTests.swift */; };
 		145F62642999D5F90058F4F6 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145F62632999D5F90058F4F6 /* SplashScreen.swift */; };
+		146B781E29DA019D003A96DF /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146B781D29DA019D003A96DF /* EventsView.swift */; };
+		1497728729AFCEAD00B51792 /* MenuVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1497728629AFCEAD00B51792 /* MenuVIew.swift */; };
+		14AC933729B4F5340021F9EE /* companies.json in Resources */ = {isa = PBXBuildFile; fileRef = 14AC933629B4F5340021F9EE /* companies.json */; };
+		14AC933C29B4F5F50021F9EE /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC933B29B4F5F50021F9EE /* CodableBundleExtension.swift */; };
+		14AC934029B4F7F20021F9EE /* CompanyModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC933F29B4F7F20021F9EE /* CompanyModal.swift */; };
+		14AC934229B4F9BE0021F9EE /* CompanyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC934129B4F9BD0021F9EE /* CompanyListView.swift */; };
+		14AC934429B528E60021F9EE /* DirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC934329B528E60021F9EE /* DirectionView.swift */; };
+		14AC934629B533390021F9EE /* MapTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC934529B533390021F9EE /* MapTestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14162C0929F583BC00D04759 /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
+		14162C0B29F58D9300D04759 /* campusEvents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = campusEvents.json; sourceTree = "<group>"; };
 		1451D9B6299C717E00F7AC08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1451D9B7299C742400F7AC08 /* MapScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenView.swift; sourceTree = "<group>"; };
 		14520D34298F6AC400B4040B /* maps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = maps.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +61,14 @@
 		14520D52298F6AC600B4040B /* mapsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapsUITests.swift; sourceTree = "<group>"; };
 		14520D54298F6AC600B4040B /* mapsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		145F62632999D5F90058F4F6 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		146B781D29DA019D003A96DF /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
+		1497728629AFCEAD00B51792 /* MenuVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVIew.swift; sourceTree = "<group>"; };
+		14AC933629B4F5340021F9EE /* companies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = companies.json; sourceTree = "<group>"; };
+		14AC933B29B4F5F50021F9EE /* CodableBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBundleExtension.swift; sourceTree = "<group>"; };
+		14AC933F29B4F7F20021F9EE /* CompanyModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModal.swift; sourceTree = "<group>"; };
+		14AC934129B4F9BD0021F9EE /* CompanyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListView.swift; sourceTree = "<group>"; };
+		14AC934329B528E60021F9EE /* DirectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionView.swift; sourceTree = "<group>"; };
+		14AC934529B533390021F9EE /* MapTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +119,14 @@
 		14520D36298F6AC400B4040B /* maps */ = {
 			isa = PBXGroup;
 			children = (
+				14AC933A29B4F5BE0021F9EE /* Extension */,
+				14AC933929B4F5680021F9EE /* Modal */,
+				14AC933529B4F5180021F9EE /* json */,
 				1451D9B6299C717E00F7AC08 /* Info.plist */,
 				14520D37298F6AC400B4040B /* mapsApp.swift */,
-				14520D39298F6AC400B4040B /* ContentView.swift */,
+				1497728529AFCE9C00B51792 /* Screen */,
 				14520D3B298F6AC600B4040B /* Assets.xcassets */,
 				14520D3D298F6AC600B4040B /* Preview Content */,
-				145F62632999D5F90058F4F6 /* SplashScreen.swift */,
-				1451D9B7299C742400F7AC08 /* MapScreenView.swift */,
 			);
 			path = maps;
 			sourceTree = "<group>";
@@ -133,6 +154,47 @@
 				14520D54298F6AC600B4040B /* mapsUITestsLaunchTests.swift */,
 			);
 			path = mapsUITests;
+			sourceTree = "<group>";
+		};
+		1497728529AFCE9C00B51792 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				14520D39298F6AC400B4040B /* ContentView.swift */,
+				145F62632999D5F90058F4F6 /* SplashScreen.swift */,
+				1451D9B7299C742400F7AC08 /* MapScreenView.swift */,
+				1497728629AFCEAD00B51792 /* MenuVIew.swift */,
+				14AC934129B4F9BD0021F9EE /* CompanyListView.swift */,
+				14AC934329B528E60021F9EE /* DirectionView.swift */,
+				14AC934529B533390021F9EE /* MapTestView.swift */,
+				146B781D29DA019D003A96DF /* EventsView.swift */,
+				14162C0929F583BC00D04759 /* TabsView.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		14AC933529B4F5180021F9EE /* json */ = {
+			isa = PBXGroup;
+			children = (
+				14162C0B29F58D9300D04759 /* campusEvents.json */,
+				14AC933629B4F5340021F9EE /* companies.json */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		14AC933929B4F5680021F9EE /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				14AC933F29B4F7F20021F9EE /* CompanyModal.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		14AC933A29B4F5BE0021F9EE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				14AC933B29B4F5F50021F9EE /* CodableBundleExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +302,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				14520D3F298F6AC600B4040B /* Preview Assets.xcassets in Resources */,
+				14AC933729B4F5340021F9EE /* companies.json in Resources */,
 				14520D3C298F6AC600B4040B /* Assets.xcassets in Resources */,
+				14162C0C29F58D9300D04759 /* campusEvents.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,8 +330,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				145F62642999D5F90058F4F6 /* SplashScreen.swift in Sources */,
+				1497728729AFCEAD00B51792 /* MenuVIew.swift in Sources */,
+				14AC933C29B4F5F50021F9EE /* CodableBundleExtension.swift in Sources */,
 				14520D3A298F6AC400B4040B /* ContentView.swift in Sources */,
 				14520D38298F6AC400B4040B /* mapsApp.swift in Sources */,
+				14AC934029B4F7F20021F9EE /* CompanyModal.swift in Sources */,
+				14162C0A29F583BC00D04759 /* TabsView.swift in Sources */,
+				14AC934429B528E60021F9EE /* DirectionView.swift in Sources */,
+				14AC934629B533390021F9EE /* MapTestView.swift in Sources */,
+				14AC934229B4F9BE0021F9EE /* CompanyListView.swift in Sources */,
+				146B781E29DA019D003A96DF /* EventsView.swift in Sources */,
 				1451D9B8299C742400F7AC08 /* MapScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +503,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = maps/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We want to use your location for something";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We want to use your location for something";
+				INFOPLIST_KEY_NSLocationUsageDescription = "We want to use your location for something";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We want to use your location for something";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -464,6 +542,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = maps/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We want to use your location for something";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We want to use your location for something";
+				INFOPLIST_KEY_NSLocationUsageDescription = "We want to use your location for something";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We want to use your location for something";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -1,0 +1,36 @@
+[
+  {
+    "id": "1228 30th St",
+    "name": "SloughFest",
+    "cordinate": "-90.557168, 41.498932",
+    "category": "Campus",
+    
+  },
+  {
+    "id": "2965 13th Ave",
+    "name": "AfroFest",
+    "cordinate": "-90.557815, \t41.498627",
+    "category": "Campus",
+    
+  },
+  {
+    "id": "1310 30th St",
+    "name": "Bingo",
+    "cordinate": "-90.557185, 41.498150",
+    "category": "Campus",
+    
+  },
+  {
+    "id": "1312 30th St",
+    "name": "Soccer Match",
+    "cordinate": "-90.557186, 41.498080",
+    "category": "Campus",
+    
+  },
+  {
+    "id": "1316 30th St",
+    "name": "Campus Jams",
+    "cordinate": "-90.557188, 41.497990",
+    "category": "Campus",
+    
+  }]
